@@ -19,5 +19,23 @@ public class Merge {
        }
    }
 
+   //this merges the numbers from the sorted left/right into data,
+   public static void merge(int[] data, int[] left, int[] right) {
+     int leftindex = 0;
+     int rightindex = 0;
+     for (int i = 0; i < data.length; i++) { //loop through data
+       if (rightindex >= right.length || (left[leftindex] <= right[rightindex])) { //if finished with right or 
+         data[i] = left[leftindex];    // take from left
+         leftindex += 1;
+       }
+       else {
+        data[i] = right[rightindex];   // take from right
+        rightindex += 1;
+      }
+    }
+   }
+
+
+
 
 }
