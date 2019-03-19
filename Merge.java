@@ -21,16 +21,16 @@ public class Merge {
 
    //this merges the numbers from the sorted left/right into data,
    public static void merge(int[] data, int[] left, int[] right) {
-     int leftindex = 0;
-     int rightindex = 0;
+     int leftcurrent = 0;
+     int rightcurrent = 0;
      for (int i = 0; i < data.length; i++) { //loop through data
-       if (rightindex >= right.length || (left[leftindex] <= right[rightindex])) { //if finished with right or 
-         data[i] = left[leftindex];    // take from left
-         leftindex += 1;
+       if (rightcurrent >= right.length || (leftcurrent < left.length && left[leftcurrent] <= right[rightcurrent])) { //if finished with right or left isnt finished and the current in left is < current in right
+         data[i] = left[leftcurrent];//insert the one from left
+         leftcurrent += 1; //index up the left
        }
-       else {
-        data[i] = right[rightindex];   // take from right
-        rightindex += 1;
+       else { //otherwise
+        data[i] = right[rightcurrent]; //insert the one form the right
+        rightcurrent += 1; //index up the right
       }
     }
    }
