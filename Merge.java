@@ -30,7 +30,7 @@ public class Merge {
        }
        else { //otherwise
         data[i] = right[rightcurrent]; //insert the one form the right
-        rightcurrent += 1; //index up the right
+        rightcurrent += 1; //index up the right 
       }
     }
    }
