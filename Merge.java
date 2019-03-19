@@ -14,9 +14,10 @@ public class Merge {
                right[i] = data[i + mid];
            }
            mergesort(left);//recursively call wrapper on left side
-           mergesort(right);//recursivley call weapper on right side
+           mergesort(right);//recursivley call wrapper on right side
            merge(data, left, right); //merge both using helper
        }
+       //doesnt do anything if it is one length
    }
 
    //this merges the numbers from the sorted left/right into data,
@@ -30,10 +31,10 @@ public class Merge {
        }
        else { //otherwise
         data[i] = right[rightcurrent]; //insert the one form the right
-        rightcurrent += 1; //index up the right 
+        rightcurrent += 1; //index up the right
       }
     }
-   }
+  } //end merging
 
 
 
